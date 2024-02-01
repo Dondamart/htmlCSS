@@ -1,0 +1,353 @@
+/* Configuración general */
+html{
+    margin: 0;
+    background-color: rgb(20, 20, 29);
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* Efectos de los links*/
+nav div:hover{
+    text-transform:uppercase ;
+    text-shadow: 0 0 7px rgb(2, 211, 19);
+}
+a:any-link{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-transform:uppercase ;
+}
+/* Configuración del body */
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+/* Configuración de la cabecera y el logo */
+header{
+    text-align: center;
+    background-image: url(https://cdn.dribbble.com/users/2458996/screenshots/9836294/media/448aa21fbc04b2009c62637c55da3ca7.gif) ;
+    background-position-y: center;
+    background-size: cover;
+    color:white;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    padding-top: 20px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.44) ;
+}
+.logo{
+    z-index: 8;
+    display: flex;
+    height: 30px;
+    width: 300px;
+    position: absolute;
+    padding-left: 30px;
+}
+/* Menú de navegación */
+nav{
+    padding: 5px;
+    display: flex;
+    padding: 0;
+    justify-content:space-around;
+}
+nav div{
+    padding: 20px;
+    width: 25%;
+    flex-wrap: wrap;
+    -ms-flex-wrap:wrap ;
+    background-image: linear-gradient(rgba(0, 128, 0, 0), rgba(17, 160, 153, 0.13));
+    font-size: large;
+}
+/* filtros de color de cada header según su sección */
+#portfolio{
+    filter:saturate(8);
+}
+#projects{
+    filter:brightness(200%) hue-rotate(110deg);
+}
+#contact{
+    filter:brightness(200%) hue-rotate(240deg);
+}
+
+/* Parte principal */
+main{
+    display: flex;
+    justify-content: center;
+}
+/* Panel izquierdo (index) */
+.aside{
+    background-image: radial-gradient(rgb(6, 227, 6),rgb(11, 182, 11), rgb(47, 122, 51), rgb(34, 40, 33));
+    color: White;
+    width: 100%;
+    height: 1030px;
+    margin-top: 130px;
+    padding:30px;
+    padding-top: 50px;
+    text-shadow: 1px 1px 2px black;
+    font-style: italic;
+    line-height: 40px;    
+} 
+/* Panel derecho (index) */
+.derecho{
+    background-color: rgb(31, 44, 35);
+    padding: 30px;
+    padding-top: 50px;
+    color: whitesmoke;
+    width: 200%;
+    height: 1030px;
+    margin-top: 130px;
+}
+/*Imagen flotante del mandaloriano */
+.flotante{
+    width: 300px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+.flotante img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.738));
+    image-rendering: optimizeSpeed;
+}
+
+/* fotografías en el index */
+.fotosmuestra{
+    margin-top: 0;
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    z-index: 8;
+    gap: 10px;
+}
+.fotosmuestra>*{
+    height: 200px;
+    width: 400px;
+    object-fit:fill;
+}
+.fotosmuestra img:hover{
+    height: 120%;
+    width: auto;
+    z-index: 9;
+}
+/* Secciones de las secundarias */
+.sections{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: fit-content;
+    margin-top: 140px;
+    padding: 10px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+}
+/* Porfolio: Apartado de diseños */
+.designs{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
+.designs img{
+    border-radius:10px;
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.642);
+    z-index: 1;
+}
+/* Diseños:efecto al pasar */
+.designs img:hover{
+    z-index: 8;
+    height: 350px;
+    width: 350px;
+    position:relative;
+}
+/* Portfolio: apartado de publicaciones */
+.books{
+margin-top: 40px;
+width: 100%;
+display:flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+}
+.books img{
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.642);
+    z-index: 1;    
+}
+.books img:hover{
+    z-index: 8;
+    width: 120%;
+    position:relative;
+}
+/* Porfolio:apartado de fotografías */
+.fotos{
+    padding: 10px;
+    margin-top: 40px;
+    width: 100%;
+    gap: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;  
+}
+.fotos img{
+    width: 300px;
+    object-fit: cover;
+}
+.horizontal:hover{
+    height: 300px;
+    width: auto;
+}
+/* ajustes para las fotos verticales */
+.vertical{
+    height: 200px;
+}
+.vertical:hover{
+    height: 100%;
+}
+/* Portfolio: Apartado video dron */
+.dron{
+    width: 80%;
+    display: flex;
+    height: min-content;
+    justify-content:center;
+
+}
+.dron>video{
+    width: 70%;
+    padding: 20px;
+    margin-left: 25%;
+}
+/* Presupuestos:Formulario */
+#formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 30%;
+    padding-bottom: 20px;
+}
+#formulario input{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#formulario button{
+    width: 8rem;
+    height: 2rem;
+}
+/* Contacto: Página del mapa */
+.cajamapa{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    object-fit:fill;
+    width:100%;
+    height:40%;
+}
+.cajamapa img{
+width: 100%;
+height: 100%;
+
+}
+
+/* Footer con redes sociales, dirección */
+footer{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+/* Footer:título */
+.mymedia{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    height: 20%;
+}
+/* Caja del footer con el resto de contenido */
+.cajafoot{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+    height: 80%;
+}
+/* Parte de los iconos */
+.iconos{
+    display: flex;
+    height:100%;
+    width: 100%;
+    padding: 10px;
+}
+.iconos img{
+    width: 50px;
+    margin-left:10px;
+}
+.iconos img:hover{
+width: 60px;}
+/* Parte de la dirección */
+.adress{
+    height:100%;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+/* Parte legal */
+.legal{
+    height:100%;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+/* Versión para móvil */
+@media screen and (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav div{
+        width: 100%;
+        background-image: linear-gradient(rgb(59, 58, 69), black);
+        padding:5px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .aside{
+        margin-top: 210px;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .derecho{
+        width: 100%;
+        margin: 0;
+    }
+    .sections{
+        margin-top: 190px;
+        padding-top: 30px;
+    }
+    .designs{
+        margin-top: 0px;
+    }
+    .cajamapa{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
